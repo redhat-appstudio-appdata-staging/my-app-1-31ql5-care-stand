@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: my-app-1
   name: devfile-sample-code-with-quarkus-8q1h
 spec:
-  replicas: 1
+  replicas: 0
   revisionHistoryLimit: 0
   selector:
     matchLabels:
@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-code-with-quarkus-8q1h
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-user-workloads-stage/abhindas-tenant/my-app-1/devfile-sample-code-with-quarkus-8q1h@sha256:4bf41fa715f38d0c0bb91be36cac4158a401a5fc35f58d1f733e7da6b9a8a068
         name: my-java-quarkus
         ports:
         - containerPort: 8081
